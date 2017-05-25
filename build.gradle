@@ -4,8 +4,14 @@ buildscript{
 		maven { url 'http://jcenter.bintray.com' }
 	}
 	dependencies {
-		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '2.1.0'
+		classpath group: 'com.blackducksoftware.integration', name: 'hub-gradle-plugin', version: '5.0.0'
 	}
+}
+
+apply plugin: 'com.blackducksoftware.hub'
+
+buildBom{
+	deployHubBdio false
 }
 
 apply plugin: 'java'
